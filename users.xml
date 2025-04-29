@@ -1,0 +1,12 @@
+<Users>
+  <User>
+    <Name>Alice Brown</Name>
+    <Age>28</Age>
+    <City>Seattle</City>
+  </User>
+  <User>
+    <Name>Tom Wilson</Name>
+    <Age>35</Age>
+    <City>Miami</City>
+  </User>
+</Users>
