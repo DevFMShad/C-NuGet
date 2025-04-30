@@ -1,0 +1,18 @@
+[
+    {
+      "$type": "JsonExample.Admin, JsonExample",
+      "Name": "Emma Clark",
+      "Age": 45,
+      "City": "San Francisco",
+      "Role": "Admin",
+      "CanManageUsers": true
+    },
+    {
+      "$type": "JsonExample.RegularUser, JsonExample",
+      "Name": "Mike Lee",
+      "Age": 29,
+      "City": "Austin",
+      "Role": "User",
+      "MembershipLevel": "Premium"
+    }
+  ]
