@@ -5,7 +5,7 @@ namespace JsonExample
 {
     class XmlReaderProgram
     {
-       public static void MainXmlReader(string[] args)
+        public static void MainXmlReader(string[] args)
         {
             try
             {
@@ -14,14 +14,23 @@ namespace JsonExample
                 doc.Load("users.xml");
 
                 // Get all User nodes
-                XmlNodeList userNodes = doc.SelectNodes("//User");
+                XmlNodeList? userNodes = doc.SelectNodes("//User");
+
+                if (userNodes == null)
+                {
+                    throw new Exception("No User nodes found in users.xml.");
+                }
 
                 // Loop through each user node
                 foreach (XmlNode node in userNodes)
                 {
-                    string name = node.SelectSingleNode("Name").InnerText;
-                    int age = int.Parse(node.SelectSingleNode("Age").InnerText);
-                    string city = node.SelectSingleNode("City").InnerText;
+                    XmlNode? nameNode = node.SelectSingleNode("Name");
+                    XmlNode? ageNode = node.SelectSingleNode("Age");
+                    XmlNode? cityNode = node.SelectSingleNode("City");
+
+                    string name = nameNode?.InnerText ?? throw new Exception("Name node is missing.");
+                    int age = int.Parse(ageNode?.InnerText ?? throw new Exception("Age node is missing."));
+                    string city = cityNode?.InnerText ?? throw new Exception("City node is missing.");
 
                     // Display user information
                     Console.WriteLine($"Name: {name}, Age: {age}, City: {city}");

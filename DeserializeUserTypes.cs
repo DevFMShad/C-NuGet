@@ -7,7 +7,7 @@ namespace JsonExample
 {
     class DeserializeUserTypes
     {
-       public static void MainDeserializeUserTypes(string[] args)
+        public static void MainDeserializeUserTypes(string[] args)
         {
             try
             {
@@ -21,7 +21,12 @@ namespace JsonExample
                 };
 
                 // Deserialize into List<User>
-                List<User> users = JsonConvert.DeserializeObject<List<User>>(json, settings);
+                List<User>? users = JsonConvert.DeserializeObject<List<User>>(json, settings);
+
+                if (users == null)
+                {
+                    throw new Exception("Failed to deserialize user_types.json: Result is null.");
+                }
 
                 // Loop through and display users
                 Console.WriteLine("User Types in JSON file:");
@@ -29,11 +34,11 @@ namespace JsonExample
                 {
                     if (user is Admin admin)
                     {
-                        Console.WriteLine($"Admin: {admin.Name}, Role: {admin.Role}, Can Manage: {admin.CanManageUsers}, City: {admin.City}");
+                        Console.WriteLine($"Admin: {admin.Name ?? "Unknown"}, Role: {admin.Role ?? "Unknown"}, Can Manage: {admin.CanManageUsers}, City: {admin.City ?? "Unknown"}");
                     }
                     else if (user is RegularUser regularUser)
                     {
-                        Console.WriteLine($"Regular User: {regularUser.Name}, Role: {regularUser.Role}, Membership: {regularUser.MembershipLevel}, City: {regularUser.City}");
+                        Console.WriteLine($"Regular User: {regularUser.Name ?? "Unknown"}, Role: {regularUser.Role ?? "Unknown"}, Membership: {regularUser.MembershipLevel ?? "Unknown"}, City: {regularUser.City ?? "Unknown"}");
                     }
                 }
             }
