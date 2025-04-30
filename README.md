@@ -1,24 +1,27 @@
-# C# NuGET, JSOIN
+# C-NuGet
 
 This project demonstrates JSON and XML processing in a .NET Console Application using Newtonsoft.Json and System.Xml.
 
 ## Tasks
-1. **Create Manual JSON File**: Created `users.json` with sample user data.
-2. **XML Reader**: Parsed `users.xml` and displayed user data.
-3. **Add JSON Entries**: Added new user to `users.json`.
-4. **Deserialize JSON**: Deserialized `users.json` and displayed all entries.
-5. **User Types with Inheritance**: Extended `User` class with `Admin` and `RegularUser`.
-6. **User Types JSON**: Created `user_types.json`, deserialized, and displayed data.
+
+### Task 1: Create Manual JSON File
+- Created `users.json` with sample user data.
+
+### Task 2: XML Reader
+- Parsed `users.xml` and displayed user data.
+
+### Task 3: Add New Entries to JSON
+- Added a new user (`Sarah Davis`) to `users.json` with a check to prevent duplicates.
+
+### Task 4: Deserialize JSON
+- Deserialized all entries from `users.json` and displayed them.
+
+### Task 5: User Types with Inheritance
+- Extended `User` class with `Admin` and `RegularUser` types using inheritance.
+
+### Task 6: Deserialize User Types
+- Created `user_types.json` with polymorphic user data, deserialized, and displayed it.
 
 ## Setup
-- Install .NET SDK.
-- Install Newtonsoft.Json: `dotnet add package Newtonsoft.Json`.
-- Run each program file individually.
-
-## Version History
-- Commit: Task 1 - Created manual JSON file.
-- Commit: Task 2 - Implemented XML reader.
-- Commit: Task 3 - Added new JSON entries.
-- Commit: Task 4 - Deserialized JSON data.
-- Commit: Task 5 - Added user types with inheritance.
-- Commit: Task 6 - Created and deserialized user_types.json.
+1. Install the .NET SDK (version 6.0 or later) from [Microsoft .NET Downloads](https://dotnet.microsoft.com/download).
+2. Clone the repository:
