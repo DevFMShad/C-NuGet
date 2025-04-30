@@ -1,33 +1,10 @@
-using Newtonsoft.Json;
 using System;
 
 namespace JsonExample
 {
-    // Base User class
-    public class User
-    {
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public string City { get; set; }
-    }
-
-    // Admin user type
-    public class Admin : User
-    {
-        public string Role { get; set; } = "Admin";
-        public bool CanManageUsers { get; set; } = true;
-    }
-
-    // Regular user type
-    public class RegularUser : User
-    {
-        public string Role { get; set; } = "User";
-        public string MembershipLevel { get; set; } = "Standard";
-    }
-
     class UserTypes
     {
-        static void Main(string[] args)
+       public static void MainUserTypes(string[] args)
         {
             // Create sample users
             Admin admin = new Admin

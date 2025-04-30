@@ -1,4 +1,3 @@
-using JsonExample;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -6,16 +5,9 @@ using System.IO;
 
 namespace JsonExample
 {
-    public class User
-    {
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public string City { get; set; }
-    }
-
     class AddJsonEntries
     {
-        static void Main(string[] args)
+       public static void MainAddJsonEntries(string[] args)
         {
             try
             {
@@ -45,29 +37,3 @@ namespace JsonExample
         }
     }
 }
-
-//after this is run it will update the users.json file
-
-/* and it will look like this
-[
-  {
-    "Name": "John Doe",
-    "Age": 30,
-    "City": "New York"
-  },
-  {
-    "Name": "Jane Smith",
-    "Age": 25,
-    "City": "Los Angeles"
-  },
-  {
-    "Name": "Bob Johnson",
-    "Age": 40,
-    "City": "Chicago"
-  },
-  {
-    "Name": "Sarah Davis",
-    "Age": 32,
-    "City": "Boston"
-  }
-]*/

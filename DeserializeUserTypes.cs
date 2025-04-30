@@ -5,28 +5,9 @@ using System.IO;
 
 namespace JsonExample
 {
-    public class User
-    {
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public string City { get; set; }
-    }
-
-    public class Admin : User
-    {
-        public string Role { get; set; }
-        public bool CanManageUsers { get; set; }
-    }
-
-    public class RegularUser : User
-    {
-        public string Role { get; set; }
-        public string MembershipLevel { get; set; }
-    }
-
     class DeserializeUserTypes
     {
-        static void Main(string[] args)
+       public static void MainDeserializeUserTypes(string[] args)
         {
             try
             {

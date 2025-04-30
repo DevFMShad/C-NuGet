@@ -5,7 +5,7 @@ namespace JsonExample
 {
     class XmlReaderProgram
     {
-        static void Main(string[] args)
+       public static void MainXmlReader(string[] args)
         {
             try
             {
